@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 bg-gradient-to-r from-green-400 to-blue-500 ">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -26,7 +26,8 @@ const Header = () => {
     </div>
     <a class="btn btn-ghost normal-case text-xl">PMP</a>
   </div>
-  <div class="navbar-center hidden lg:flex">
+  <div class="navbar-center hidden lg:flex  text-xl
+  ">
     <ul class="menu menu-horizontal p-0">
       <li> <Link to='/home'>Home</Link></li>
       <li> <Link to='/agreements'>Agreements </Link></li>

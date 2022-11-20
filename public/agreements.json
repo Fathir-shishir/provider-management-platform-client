@@ -1,0 +1,52 @@
+[
+    {
+      "_id": "637a1e9cfc7124ceee7319f0",
+      "name": "Web Application development",
+      "type": "Team",
+      "status": "Published",
+      "cycle": 1,
+      "startTime": "2019-04-05",
+      "endTime": "2015-12-01",
+      "location": "Frankfurt"
+    },
+    {
+      "_id": "637a1e9cfd255e06b5956c63",
+      "name": "Mobile app development",
+      "type": "Team",
+      "status": "Published",
+      "cycle": 2,
+      "startTime": "2022-01-12",
+      "endTime": "2022-04-06",
+      "location": "Berlin"
+    },
+    {
+      "_id": "637a1e9cea1a3b83e6197b53",
+      "name": "Software development",
+      "type": "Team",
+      "status": "New",
+      "cycle": 1,
+      "startTime": "2017-06-19",
+      "endTime": "2015-08-10",
+      "location": "Humburg"
+    },
+    {
+      "_id": "637a1e9c90d6e529b6ae223b",
+      "name": "Human Resources",
+      "type": "Single",
+      "status": "Open",
+      "cycle": 1,
+      "startTime": "2017-04-09",
+      "endTime": "2018-09-30",
+      "location": "Frankfurt"
+    },
+    {
+      "_id": "637a1e9c831c56efc458728c",
+      "name": "IT Section",
+      "type": "Team",
+      "status": "New",
+      "cycle": 2,
+      "startTime": "2016-12-15",
+      "endTime": "2020-05-14",
+      "location": "Koln"
+    }
+  ]
