@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Agreement = (props) => {
     const {name, type,status,cycle,startTime,endTime,location}=props.agreement
-    console.log(props.agreement)
+    
     return (
         <div class="card w-96 bg-neutral text-neutral-content">
         <div class="card-body items-center text-center">
@@ -30,7 +31,7 @@ location_on
           </div>
          
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Check</button>
+            <button class="btn btn-primary"> <Link to='/agreementsDetails'>Check</Link> </button>
             <button class="btn btn-ghost">{status}</button>
           </div>
         </div>
