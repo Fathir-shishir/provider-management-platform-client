@@ -15,7 +15,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/agreements' element={<Agreements></Agreements>}></Route>
-        <Route path='/agreementsDetails' element={<AgreementsDetails></AgreementsDetails>}></Route>
+        <Route path='/agreements/:agreementsDetails' element={<AgreementsDetails></AgreementsDetails>}></Route>
       </Routes>
       <ToastContainer />
     </div>

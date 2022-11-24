@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const AgreementsDetails = () => {
+  const {agreementsDetails}=useParams()
+  const[agreementDetails, setAgreementDetail]=useState([])
+  useEffect(()=>{
+      fetch(`http://localhost:5000/agreementsDetails/${agreementsDetails}`)
+      .then(res=>res.json())
+      .then(data=>setAgreementDetail(data))
+  },[agreementsDetails])
+
+  const {name,type} = agreementDetails
+
+  console.log(agreementDetails)
+
     return (
         <div>
         <div className="text-5xl font-bold underline text-center mt-10">
             <h1>Open Position</h1>
+            
 
         </div>
         
@@ -23,7 +37,7 @@ const AgreementsDetails = () => {
       {/* <!-- row 1 --> */}
       <tr>
         <th>1</th>
-        <td>Intern (m/f/d) for web design / development in a modern online startup</td>
+        <td>{name}</td>
         <td><a href="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390"><img className='w-50 h-40' src='https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390' onClick="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390" /></a></td>
         <td>senior</td>
       </tr>

@@ -6,23 +6,28 @@ const AddAgreementsModal = (props) => {
     // const [newAggrements,setNewAgreements]= useState([])
     const {setAgreementsModal} = props
     const { register, handleSubmit } = useForm();
-    const onSubmit = data =>  { 
-         console.log(data) 
+    const onSubmit = (result) =>  { 
+      console.log(result)
+        fetch('http://localhost:5000/agreements',{
+        method:'POST',
+        headers:{
+            'content-type':'application/json',
+        },
+        body: JSON.stringify(result)
+
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        setAgreementsModal(0)
+        toast('added')
+        ;
+        console.log(data)
+    })
     }
-    // console.log(newAggrements)
+    
   
-    // fetch('http://localhost:5000/agreements',{
-    //     method:'POST',
-    //     headers:{
-    //         'cotent-type':'application/json'
-    //     },
-    //     body: JSON.stringify(newAggrements)
-    // })
-    // .then(res=>res.json())
-    // .then(data=>{
-    //     setAgreementsModal(0)
-    //     toast('added')
-    // })
+  
+  
 
     return (
         <div>

@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Agreement = (props) => {
-    const {name, type,status,cycle,startTime,endTime,location}=props.agreement
+    const {_id,name, type,status,cycle,startTime,endTime,location}=props.agreement
     
     return (
         <div class="card w-96 bg-neutral text-neutral-content">
         <div class="card-body items-center text-center">
           <h2 class="card-title">{name}</h2>
           <p>{type}</p>
+          <p>{_id}</p>
           <div className='flex gap-2 '>
           <span class="material-symbols-outlined">
 cycle
@@ -31,8 +32,8 @@ location_on
           </div>
          
           <div class="card-actions justify-end">
-            <button class="btn btn-primary"> <Link to='/agreementsDetails'>Check</Link> </button>
-            <button class="btn btn-ghost">{status}</button>
+            <button class="btn btn-primary"> <Link to={`/agreements/${_id}`}>Check</Link> </button>
+            <button class="btn btn-ghost" >{status}</button>
           </div>
         </div>
       </div>
@@ -40,3 +41,5 @@ location_on
 };
 
 export default Agreement;
+
+//  to =``
