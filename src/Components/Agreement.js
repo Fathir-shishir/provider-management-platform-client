@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AgreementsDetails from './AgreementsDetails';
 
 const Agreement = (props) => {
-    const {_id,name, type,status,cycle,startTime,endTime,location}=props.agreement
-    
+    const {_id,name, type,status,cycle,startTime,endTime,location,agreementsDetails}=props.agreement
     return (
         <div class="card w-96 bg-neutral text-neutral-content">
         <div class="card-body items-center text-center">
@@ -32,7 +32,8 @@ location_on
           </div>
          
           <div class="card-actions justify-end">
-            <button class="btn btn-primary"> <Link to={`/agreements/${_id}`}>Check</Link> </button>
+          <button class="btn btn-primary"> <Link to="/agreementsDetails" state={{ data: agreementsDetails }}>Check</Link> </button>
+            
             <button class="btn btn-ghost" >{status}</button>
           </div>
         </div>

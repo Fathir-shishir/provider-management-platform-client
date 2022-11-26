@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import AgreementsDetailsRow from './AgreementsDetailsRow';
 
 const AgreementsDetails = () => {
-  const {agreementsDetails}=useParams()
-  const[agreementDetails, setAgreementDetail]=useState([])
-  useEffect(()=>{
-      fetch(`http://localhost:5000/agreementsDetails/${agreementsDetails}`)
-      .then(res=>res.json())
-      .then(data=>setAgreementDetail(data))
-  },[agreementsDetails])
+  
+  // const {agreementsDetails}=useParams()
+  // const[agreementDetails, setAgreementDetail]=useState([])
+  const location = useLocation();
+  const details = location.state?.data;
+  console.log(details)
+  // useEffect(()=>{
+  //     fetch(`http://localhost:5000/agreementsDetails/${agreementsDetails}`)
+  //     .then(res=>res.json())
+  //     .then(data=>setAgreementDetail(data))
+  // },[agreementsDetails])
 
-  const {name,type} = agreementDetails
+  // const {name,type} = agreementDetails
 
-  console.log(agreementDetails)
+  // console.log(agreementDetails)
 
     return (
         <div>
@@ -34,27 +40,14 @@ const AgreementsDetails = () => {
       </tr>
     </thead>
     <tbody>
-      {/* <!-- row 1 --> */}
-      <tr>
-        <th>1</th>
-        <td>{name}</td>
-        <td><a href="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390"><img className='w-50 h-40' src='https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390' onClick="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390" /></a></td>
-        <td>senior</td>
-      </tr>
-      {/* <!-- row 2 --> */}
-      <tr>
-        <th>1</th>
-        <td>Intern (m/f/d) for web design / development in a modern online startup</td>
-        <td><a href="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390"><img className='w-50 h-40' src='https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390' onClick="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390" /></a></td>
-        <td>senior</td>
-      </tr>
-      {/* <!-- row 3 --> */}
-      <tr>
-        <th>1</th>
-        <td>Intern (m/f/d) for web design / development in a modern online startup</td>
-        <td><a href="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390"><img className='w-50 h-40' src='https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390' onClick="https://images.template.net/wp-content/uploads/2019/07/Senior-Consultant-Job-Description.jpg?width=390" /></a></td>
-        <td>senior</td>
-      </tr>
+     {
+       details.map((detail,index)=> <AgreementsDetailsRow detail={detail} index={index}>
+
+       </AgreementsDetailsRow>)
+     }
+     
+     
+     
     </tbody>
   </table>
 </div>
