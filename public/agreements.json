@@ -1,7 +1,7 @@
 [
     {
       "_id": "637a1e9cfc7124ceee7319f0",
-      "name": "Web Application development",
+      "name": "Web Application Development",
       "type": "Team",
       "status": "Published",
       "cycle": 1,
@@ -11,7 +11,7 @@
     },
     {
       "_id": "637a1e9cfd255e06b5956c63",
-      "name": "Mobile app development",
+      "name": "Mobile app Development",
       "type": "Team",
       "status": "Published",
       "cycle": 2,
@@ -21,7 +21,7 @@
     },
     {
       "_id": "637a1e9cea1a3b83e6197b53",
-      "name": "Software development",
+      "name": "Software Development",
       "type": "Team",
       "status": "New",
       "cycle": 1,
