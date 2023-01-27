@@ -7,8 +7,8 @@ const AddAgreementsModal = (props) => {
     const {setAgreementsModal} = props
     const { register, handleSubmit } = useForm();
     const onSubmit = (result) =>  { 
-      console.log(result)
-        fetch('http://localhost:5000/agreements',{
+        result.status="published"
+        fetch('https://provider-management-platform-server.onrender.com/agreements',{
         method:'POST',
         headers:{
             'content-type':'application/json',
@@ -39,13 +39,12 @@ const AddAgreementsModal = (props) => {
     <button className='btn' onClick={()=>{setAgreementsModal(0)}}>CLOSE</button>
       </div>
      <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 gap-3 mt-5'>
-     <input  {...register("name")} type="text" placeholder="Name" class="input input-bordered w-full max-w-xs" />
-     <input {...register("type")} type="text" placeholder="Type" class="input input-bordered w-full max-w-xs" />
-     <input {...register("status")} type="text" placeholder="Status" class="input input-bordered w-full max-w-xs" />
-     <input {...register("cycle")} type="text" placeholder="Cycle" class="input input-bordered w-full max-w-xs" />
-     <input {...register("startTime")} type="text" placeholder="Start Time" class="input input-bordered w-full max-w-xs" />
-     <input {...register("endTime")} type="text" placeholder="End Time" class="input input-bordered w-full max-w-xs" />
-     <input {...register("location")} type="text" placeholder="Location" class="input input-bordered w-full max-w-xs" />
+     <input  {...register("name")} type="text" placeholder="Name" class="input input-bordered w-full max-w-xs" required />
+     <input {...register("type")} type="text" placeholder="Type(Single or Team)" class="input input-bordered w-full max-w-xs" required/>
+     <input {...register("cycle")} type="number" placeholder="Cycle" class="input input-bordered w-full max-w-xs" required />
+     <input {...register("startTime")} type="text" placeholder="Start Time(Year-Month-Day )" class="input input-bordered w-full max-w-xs" required />
+     <input {...register("endTime")} type="text" placeholder="End Time(Year-Month-Day )" class="input input-bordered w-full max-w-xs" required/>
+     <input {...register("location")} type="text" placeholder="Location" class="input input-bordered w-full max-w-xs" required/>
      
     <div class="modal-action">
      <input className='btn' type="submit"  />

@@ -1,16 +1,22 @@
 import React from 'react';
 
-const AgreementsDetailsRow = ({index, detail}) => {
-    const {name,type} = detail
+const AgreementsDetailsRow = ({details,index}) => {
+    const {name,type,_id} =details
     return (
         <tr>
-        <th>{index + 1}</th>
+        <th>{ index+ 1}</th>
+        <td>{_id}</td>
         <td>{name}</td>
-        <td>{type}</td>
-        <td>
-            <label for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
+        <td> 
+            <a href={type} target="_blank"> 
+               <img className='w-30 h-40' src={type} alt="" clicked />
+            </a>
         </td>
+        
+        
     </tr>
+    
+       
     );
 };
 

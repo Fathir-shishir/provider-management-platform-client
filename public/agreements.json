@@ -1,6 +1,6 @@
 [
     {
-      "_id": "637a1e9cfc7124ceee7319f0",
+     
       "name": "Web Application development",
       "type": "Team",
       "status": "Published",
@@ -10,7 +10,7 @@
       "location": "Frankfurt"
     },
     {
-      "_id": "637a1e9cfd255e06b5956c63",
+   
       "name": "Mobile app development",
       "type": "Team",
       "status": "Published",
@@ -20,7 +20,7 @@
       "location": "Berlin"
     },
     {
-      "_id": "637a1e9cea1a3b83e6197b53",
+     
       "name": "Software development",
       "type": "Team",
       "status": "New",
@@ -30,7 +30,7 @@
       "location": "Humburg"
     },
     {
-      "_id": "637a1e9c90d6e529b6ae223b",
+     
       "name": "Human Resources",
       "type": "Single",
       "status": "Open",
@@ -40,7 +40,7 @@
       "location": "Frankfurt"
     },
     {
-      "_id": "637a1e9c831c56efc458728c",
+   
       "name": "IT Section",
       "type": "Team",
       "status": "New",

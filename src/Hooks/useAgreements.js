@@ -3,9 +3,12 @@ import React, { useEffect, useState } from 'react';
 const useAgreements = () => {
     const[agreements, setAgreements]=useState([])
     useEffect(()=>{
-        fetch('demo.json')
+        fetch('https://provider-management-platform-server.onrender.com/agreements')
         .then(res=>res.json())
-        .then(data=>setAgreements(data))
+        .then(data=>{
+            
+            setAgreements(data)
+        })
     },[])
 
 

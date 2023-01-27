@@ -1,43 +1,42 @@
 [
   {
-    "agreements":[
-      {
-        "key":1,
-        "name": "Web Application development",
-      "type": "Team",
-      "status": "Published",
-      "cycle": 1,
-      "startTime": "2019-04-05",
-      "endTime": "2015-12-01",
-      "location": "Frankfurt",
-      "agreementsDetails":[
-        {
-          "name":"Backend developer",
-          "type":"Noob"
-        },
-        {
-          "name":"Frontend developer",
-          "type":"Experienced"
-        }
-      ],
-      "providerList":[]
-      },
-      { "key":2,
-        "name": "Mobile app development",
-        "type": "Team",
-        "status": "Published",
-        "cycle": 2,
-        "startTime": "2022-01-12",
-        "endTime": "2022-04-06",
-        "location": "Berlin",
-        "agreementsDetails":[
-          {
-            "name":"Apps developer",
-            "type":"Noob"
-          }
-        ],
-        "providerList":[]
-      }
-    ]
+    "contactperson":"acsac",
+    "agreementsId": "63836197a3f23cddb9e961fd",
+    "dateuntil":"Thu Jan 26 2023 01:00:00 GMT+0100 (Central European Standard Time)",
+    "document":"C:\fakepathapture.PNG",
+    "employee_name":"fathir",
+    "externalperson":"acas",
+    "notes":"asdas",
+    "offerid": "63b9ac6c583721b269fefc82",
+    "provider_name": "A",
+    "rate": "12"  
+
+  },
+  {
+    "contactperson":"acsac",
+    "agreementsId": "63836197a3f23cddb9e961fd",
+    "dateuntil":"Thu Jan 26 2023 01:00:00 GMT+0100 (Central European Standard Time)",
+    "document":"C:\fakepathapture.PNG",
+    "employee_name":"ahmed",
+    "externalperson":"acas",
+    "notes":"asdas",
+    "offerid": "63b9ac6c583721b269fefc82",
+    "provider_name": "A",
+    "rate": "12"  
+
+  },
+  {
+    "contactperson":"acsac",
+    "agreementsId": "63836197a3f23cddb9e961fd",
+    "dateuntil":"Thu Jan 26 2023 01:00:00 GMT+0100 (Central European Standard Time)",
+    "document":"C:\fakepathapture.PNG",
+    "employee_name":"shishir",
+    "externalperson":"acas",
+    "notes":"asdas",
+    "offerid": "63b9ac6c583721b269fefc82",
+    "provider_name": "A",
+    "rate": "12"  
+
   }
+ 
 ]
